@@ -1,0 +1,73 @@
+@model List<Aashirwad.Models.Patient>
+@{ Layout = null; }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+    </style>
+      <link rel="stylesheet" href="/static/css/aashirwad-custom.css?v=20261028" />
+</head>
+
+  <body>
+    <div class="container">
+      <h1>Admin Appointment Data</h1>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>DOB</th>
+          <th>Gender</th>
+          <th>Address</th>
+          <th>Email</th>
+          <th>Aadhar</th>
+          <th>Bed Type</th>
+        </tr>
+
+        @if (Model != null) { foreach (var patient in Model) {
+        <tr>
+          <td>@patient.Name</td>
+          <td>@patient.Dob</td>
+          <td>@patient.Gender</td>
+          <td>@patient.Address</td>
+          <td>@patient.Email</td>
+          <td>@patient.Aadhaar</td>
+          <td>@patient.BedType</td>
+        </tr>
+        } }
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+bin/
+obj/
+temp_keys/
+.vs/
+*.user
+*.suo
+TestResults/
+
+appsettings.json
+appsettings.Development.json
+appsettings.*.json
+!appsettings.example.json
+.env
+.env.*
+!.env.example

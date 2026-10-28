@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- MongoDB Driver — equivalent to Python's pymongo -->
+    <PackageReference Include="MongoDB.Driver" Version="3.4.0" />
+
+    <!-- BCrypt — equivalent to Python's flask-bcrypt -->
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+
+    <!-- QR Code Generator — equivalent to Python's qrcode library -->
+    <PackageReference Include="QRCoder" Version="1.6.0" />
+
+    <!-- PDF Generation — equivalent to Python's reportlab (itext7 is .NET 10 compatible) -->
+    <PackageReference Include="itext7" Version="9.1.0" />
+  </ItemGroup>
+
+</Project>
